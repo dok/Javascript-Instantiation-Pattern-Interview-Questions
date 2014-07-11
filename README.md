@@ -1,7 +1,6 @@
 **Javascript Instantiation Pattern Interview Questions**
 
 **What is the difference between pseudoclassical and prototypal instantiation?**
-
 Pseudoclassical instantiation is another layer of abstraction over the prototypal instantiation. And it was a way for developers coming from Object oriented languages to be more familiar with the language.
 
 Prototypal Pattern:
@@ -23,7 +22,6 @@ function Shoe(color) {
 }
 
 var shoe = new Shoe(‘red’);
-
 Shoe.prototype.wear = function() { ... };
 ```
 **Implement an Animal class, Mammal subclass, Lion subclass. Use pseudoclassical instantiation.**
@@ -94,15 +92,12 @@ Lion.prototype.roar = function() {
 var lion = Lion('leon', 4, 400);
 ```
 **What is the object ‘prototype’**
-
 Is a javascript object with a very misleading name. It holds methods or properties to the function such that when it is used as a constructor, the instances that are derived from the maker function will have access to everything that is stored in the prototype object.
 
 **What is ‘prototype.constructor’?**
-
 Is a reference to the maker function that was used to create the particular instance.
 
 **What does Object.create do?**
-
 Object.create will establish a delegation relationship between the instantiation object and the object that has been passed.
 
 For instance:
