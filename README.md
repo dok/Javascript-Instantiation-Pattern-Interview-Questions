@@ -162,3 +162,7 @@ var Car = function(type, speed) {
 	return instance;
 };
 ```
+
+**Contributors**
+- [Cilop](www.github.com/cilop)
+- [dokko1230](www.github.com/dokko1230)
