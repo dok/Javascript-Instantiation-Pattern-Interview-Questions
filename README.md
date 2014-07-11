@@ -5,7 +5,7 @@
 Pseudoclassical instantiation is another layer of abstraction over the prototypal instantiation. And it was a way for developers coming from Object oriented languages to be more familiar with the language.
 
 Prototypal Pattern:
-
+```javascript
 function Shoe(color) {
 
 	var instance = Object.create(Shoe.prototype);
@@ -17,7 +17,7 @@ function Shoe(color) {
 }
 
 Shoe.prototype.wear = function() { ... };
-
+```
 Pseudoclassical Pattern:
 
 function Shoe(color) {
