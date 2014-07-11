@@ -19,7 +19,7 @@ function Shoe(color) {
 Shoe.prototype.wear = function() { ... };
 ```
 Pseudoclassical Pattern:
-
+```javascript
 function Shoe(color) {
 
 	// this = Object.create(Shoe.prototype); // This line will be injected into the method when using the ‘new’ keyword
@@ -33,9 +33,9 @@ this.color = color;
 var shoe = new Shoe(‘red’);
 
 Shoe.prototype.wear = function() { ... };
-
+```
 **Implement an Animal class, Mammal subclass, Lion subclass. Use pseudoclassical instantiation.**
-
+```javascript
 var Animal = function(name) {
 
 this.name = name;
@@ -83,9 +83,9 @@ Lion.prototype.roar = function() {
 	console.log('RAWR!');
 
 };
-
+```
 **Now do that using a prototypal instantiation pattern.**
-
+```javascript
 var Animal = function(name) {
 
 	var instance = Object.create(Animal.prototype);
@@ -135,7 +135,7 @@ Lion.prototype.roar = function() {
 //usage
 
 var lion = Lion('leon', 4, 400);
-
+```
 **What is the object ‘prototype’**
 
 Is a javascript object with a very misleading name. It holds methods or properties to the function such that when it is used as a constructor, the instances that are derived from the maker function will have access to everything that is stored in the prototype object.
@@ -149,7 +149,7 @@ Is a reference to the maker function that was used to create the particular inst
 Object.create will establish a delegation relationship between the instantiation object and the object that has been passed.
 
 For instance:
-
+```javascript
 function Shoe(color) {
 
 	var instance = Object.create(Shoe.prototype);
@@ -163,11 +163,11 @@ function Shoe(color) {
 Shoe.prototype.wear = function() { ... };
 
 var shoe = Shoe('blue');
-
+```
 when shoe.wear is called, it will try to find it in its own object. If it does not find it, it will bubble up to Shoe.prototype. And if it does not find it, it will bubble up to the Object prototype.
 
 **Write a Vehicle class using a functional instantiation pattern and then a Car as a subclass.**
-
+```javascript
 var Vehicle = function(speed) {
 
 	var instance = {};
@@ -199,9 +199,9 @@ var Car = function(type, speed) {
 	return instance;
 
 };
-
+```
 **Now do that with a functional shared pattern**
-
+```javascript
 var honk = function() {
 
 	console.log('Honking at ' + this.speed); 
@@ -237,4 +237,4 @@ var Car = function(type, speed) {
 	return instance;
 
 };
-
+```
