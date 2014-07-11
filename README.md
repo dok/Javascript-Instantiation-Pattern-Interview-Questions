@@ -164,5 +164,5 @@ var Car = function(type, speed) {
 ```
 
 **Contributors**
-- [Cilop](www.github.com/cilop)
-- [dokko1230](www.github.com/dokko1230)
+- [Cilop](http://www.github.com/cilop)
+- [dokko1230](http://www.github.com/dokko1230)
